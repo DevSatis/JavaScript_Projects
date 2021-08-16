@@ -1,4 +1,4 @@
-const names = ["Youtube", "Netflix", "Amazon", "Instagram", "Facebook"];
+const names = ["Youtube", "Netflix", "Amazon", "Instagram", "Facebook", "twitter"];
 
 for(const n of names){
     console.log(n);
