@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First Webpage</title>
+</head>
+<body>
+    <table cellpadding="2" cellspacing="2" border="0" Backgroundcolor="#dfdfdf" width="40%" align="center">
+        <thead>
+        <tr>
+        <th>employeeId</th>
+        <th width="20%">fullName</th>
+        <th width="12%">isManager</th>
+        </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+        </table>
+        <script type="text/javascript">
+          
+        var k = '<tbody>'
+        
+        if(Handlebars.length == 0){
+        
+        k+='<tr>';
+        
+        k+="No Data"+'</tr>';
+        
+        k+='</tbody>';
+        
+        }else{
+            for(i = 0;i < Handlebars.length; i++){
+                k+= '<tr>';
+                k+= '<td>' + Handlebars[i].employeeId + '</td>';
+                k+= '<td>' + Handlebars[i].fullName + '</td>';
+        
+                if(Handlebars[i].isManager === true){
+        
+                    k+= '<td>' + "Manager" + '</td>';
+                }
+        
+                else{
+        
+                    k+= '<td>' + "" + '</td>';
+        
+                }
+                 k+= '</tr>';
+                 }
+            k+='</tbody>';
+        
+        }
+        document.getElementById('tableData').innerHTML = k;
+        </script>
+</body>
+</html>
