@@ -1,11 +1,6 @@
 import java.math.BigInteger;
 
-/*
- * Complete the insert(E val) method
- * Complete the contains(E val) method
- * Complete the get(E val) method
- * Complete the remove(E val) method
- */
+
 public class B2Hopscotch<E> {
    private Node<E>[] table1, table2;
    private int count;
